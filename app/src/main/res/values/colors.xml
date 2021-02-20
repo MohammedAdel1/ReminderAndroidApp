@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="eventLayout">#03D3C9</color>
+    <color name="eventDate">#D3030D</color>
+    <color name="addNewEventLayout">#A15E5F</color>
+    <color name="newEventEditTexts">#5EA1A0</color>
+    <color name="btns_clicked">#7EB4B3</color>
+    <color name="editTextsBack">#D2D0D0</color>
+    <color name="eventInfo">#006a71</color>
+</resources>

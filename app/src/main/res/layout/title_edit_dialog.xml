@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_dialog_window"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <EditText
+        android:id="@+id/eventNameInput2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_edit_texts"
+        android:ems="10"
+        android:hint="@string/event_name_hint"
+        android:inputType="textPersonName"
+        android:paddingStart="60dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/newEventEditTexts"
+        android:textColorHint="@color/newEventEditTexts"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/nameIcon2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/imageContent"
+        app:layout_constraintBottom_toBottomOf="@+id/eventNameInput2"
+        app:layout_constraintStart_toStartOf="@+id/eventNameInput2"
+        app:layout_constraintTop_toTopOf="@+id/eventNameInput2"
+        app:srcCompat="@drawable/ic_baseline_event_note_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:text="@string/editNameDialog"
+        android:textAlignment="textStart"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="25sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/eventNameInput2"
+        app:layout_constraintStart_toStartOf="@+id/eventNameInput2"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Reminder</string>
+    <string name="imageContent">Image</string>
+    <string name="add_new_event">Add event</string>
+    <string name="event_name_hint">Event name</string>
+    <string name="event_date_hint">Date</string>
+    <string name="event_time_hint">Time</string>
+    <string name="event_budget_hint">Event budget</string>
+    <string name="set_date_Btn">Set date</string>
+    <string name="set_time_Btn">Set time</string>
+    <string name="done_btn">Done</string>
+    <string name="event_title">Event Name</string>
+    <string name="event_date">5 sep 2020</string>
+    <string name="event_time">8:00pm</string>
+    <string name="event_budget">Free</string>
+    <string name="search_hint">Search events</string>
+    <string name="noEvents">There is no events, add some events now</string>
+    <string name="editMenuItem">Edit</string>
+    <string name="deleteMenuItem">Delete</string>
+    <string name="editNameDialog">Edit name</string>
+    <string name="editBudgetDialog">Edit budget</string>
+    <string name="remindMe">Remind me :</string>
+    <string name="before">before the event.</string>
+
+
+</resources>

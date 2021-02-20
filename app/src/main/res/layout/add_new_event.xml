@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backBtnImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/addNewEventLayout"
+    android:textAlignment="gravity">
+
+    <TextView
+        android:id="@+id/AddNewEventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/title_custom_text"
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:text="@string/add_new_event"
+        android:textAlignment="gravity"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="60sp"
+        android:textStyle="normal|bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eventNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_edit_texts"
+        android:ems="10"
+        android:hint="@string/event_name_hint"
+        android:inputType="textPersonName"
+        android:paddingStart="60dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/newEventEditTexts"
+        android:textColorHint="@color/newEventEditTexts"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/AddNewEventTitle"
+        app:layout_constraintStart_toStartOf="@+id/AddNewEventTitle"
+        app:layout_constraintTop_toBottomOf="@+id/AddNewEventTitle" />
+
+    <Button
+        android:id="@+id/doneBtn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_set_buttons"
+        android:onClick="onDoneClick"
+        android:text="@string/done_btn"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="35sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="@+id/eventBudgetInput"
+        app:layout_constraintStart_toStartOf="@+id/eventBudgetInput"
+        app:layout_constraintTop_toBottomOf="@+id/eventBudgetInput" />
+
+    <EditText
+        android:id="@+id/eventBudgetInput"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_edit_texts"
+        android:ems="10"
+        android:hint="@string/event_budget_hint"
+        android:inputType="number|numberDecimal"
+        android:paddingStart="60dp"
+        android:paddingEnd="0dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/newEventEditTexts"
+        android:textColorHint="@color/newEventEditTexts"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/eventNameInput"
+        app:layout_constraintStart_toStartOf="@+id/eventNameInput"
+        app:layout_constraintTop_toBottomOf="@+id/eventTimeInput" />
+
+    <TextView
+        android:id="@+id/eventDateInput"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_edit_texts"
+        android:gravity="center"
+        android:onClick="showDatePicker"
+        android:paddingStart="60dp"
+        android:paddingEnd="0dp"
+        android:text="@string/event_date_hint"
+        android:textAlignment="viewStart"
+        android:textColor="@color/newEventEditTexts"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/eventNameInput"
+        app:layout_constraintStart_toStartOf="@+id/eventNameInput"
+        app:layout_constraintTop_toBottomOf="@+id/eventNameInput" />
+
+    <TextView
+        android:id="@+id/eventTimeInput"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_edit_texts"
+        android:gravity="center"
+        android:onClick="showTimePicker"
+        android:paddingStart="60dp"
+        android:paddingEnd="0dp"
+        android:text="@string/event_time_hint"
+        android:textAlignment="textStart"
+        android:textColor="@color/newEventEditTexts"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/eventDateInput"
+        app:layout_constraintStart_toStartOf="@+id/eventDateInput"
+        app:layout_constraintTop_toBottomOf="@+id/eventDateInput" />
+
+    <ImageView
+        android:id="@+id/nameIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/imageContent"
+        app:layout_constraintBottom_toBottomOf="@+id/eventNameInput"
+        app:layout_constraintStart_toStartOf="@+id/eventNameInput"
+        app:layout_constraintTop_toTopOf="@+id/eventNameInput"
+        app:srcCompat="@drawable/ic_baseline_event_note_24" />
+
+    <ImageView
+        android:id="@+id/dateIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/imageContent"
+        app:layout_constraintBottom_toBottomOf="@+id/eventDateInput"
+        app:layout_constraintStart_toStartOf="@+id/eventTimeInput"
+        app:layout_constraintTop_toTopOf="@+id/eventDateInput"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+
+    <ImageView
+        android:id="@+id/timeIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/imageContent"
+        app:layout_constraintBottom_toBottomOf="@+id/eventTimeInput"
+        app:layout_constraintStart_toStartOf="@+id/eventTimeInput"
+        app:layout_constraintTop_toTopOf="@+id/eventTimeInput"
+        app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+    <ImageView
+        android:id="@+id/budgetIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/imageContent"
+        app:layout_constraintBottom_toBottomOf="@+id/eventBudgetInput"
+        app:layout_constraintStart_toStartOf="@+id/eventBudgetInput"
+        app:layout_constraintTop_toTopOf="@+id/eventBudgetInput"
+        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/imageContent"
+        android:onClick="onBackBtn"
+        app:layout_constraintStart_toStartOf="@+id/AddNewEventTitle"
+        app:layout_constraintTop_toTopOf="@+id/AddNewEventTitle"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/remindMeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/remindMe"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@+id/eventTimeInput"
+        app:layout_constraintTop_toBottomOf="@+id/eventTimeInput" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/custom_dialog_buttons"
+        android:spinnerMode="dialog"
+        app:layout_constraintStart_toStartOf="@+id/remindMeText"
+        app:layout_constraintTop_toBottomOf="@id/remindMeText" />
+
+    <TextView
+        android:id="@+id/beforeTheEventTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/before"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@id/spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
